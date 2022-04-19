@@ -25,6 +25,24 @@ namespace NLayerApp.Repository
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             //modelBuilder.ApplyConfiguration(new ProductConfiguration());
+
+            modelBuilder.Entity<ProductFeature>().HasData(
+                new ProductFeature()
+                {
+                    Id = 1,
+                    Color = "Maroon",
+                    Height = 10,
+                    Width = 1,
+                    ProductId = 1,
+                },
+                new ProductFeature()
+                {
+                    Id = 5,
+                    Color = "Green",
+                    Height = 30,
+                    Width = 20,
+                    ProductId = 2,
+                });
         }
     }
 }
