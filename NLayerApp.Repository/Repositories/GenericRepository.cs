@@ -35,7 +35,7 @@ namespace NLayerApp.Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             //AsNoTracking() metodu çekilen dataları memory'e almaz. Track etmediği için izlemez. Bu sebeple performansı arttırır.
             return _dbSet.AsNoTracking().AsQueryable();
