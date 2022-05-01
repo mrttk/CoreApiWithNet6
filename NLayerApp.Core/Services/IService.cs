@@ -9,7 +9,7 @@ namespace NLayerApp.Core.Services
 {
     public interface IService<T> where T : class
     {
-        Task<T> GetById(int id);
+        Task<T> GetByIdAsync(int id);
         // productRepository.where(x=>x.id > 5).ToListAsync();
         Task<IEnumerable<T>> GetAllAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
