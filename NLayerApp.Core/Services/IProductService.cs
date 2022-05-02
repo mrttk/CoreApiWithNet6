@@ -10,6 +10,6 @@ namespace NLayerApp.Core.Services
 {
     public interface IProductService : IService<Product>
     {
-        Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductWithCategoryAsync();
+        Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategoryAsync();
     }
 }
